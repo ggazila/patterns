@@ -1,11 +1,6 @@
 package structural.adapter.javarush;
 
-public class CardReader implements USB {
-    private final MemoryCard memoryCard;
-
-    public CardReader(MemoryCard memoryCard) {
-        this.memoryCard = memoryCard;
-    }
+public record CardReader(MemoryCard memoryCard) implements USB {
 
     @Override
     public void connectWithUsbCable() {
